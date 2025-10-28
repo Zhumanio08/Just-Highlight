@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings</title>
+  <link id="theme-style" rel="stylesheet" href="styles/popup-dark.css">
+</head>
+<body>
+  <div class="popup">
+    <div class="header">
+      <img class="icon-box" src="images/logo.png" />
+      <h2 id="popupTitle">Settings</h2>
+    </div>
+
+    <div class="scroll-content">
+      <div class="section">
+        <div class="section-title" id="langOpen">Open Settings</div>
+        <div class="shortcut">Alt+T<span class="edit" id="editOpen">Edit</span></div>
+
+        <div class="section-title" id="langClose">Open Dictionary</div>
+        <div class="shortcut">Alt+Q<span class="edit" id="editClose">Edit</span></div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section">
+        <div class="section-title big" id="autoTranslateLabel">Auto translate selection</div>
+        <label class="switch">
+          <input type="checkbox" id="toggleAutoTranslate">
+          <span class="slider"></span>
+        </label>
+        <p class="description" id="autoTranslateDesc">Automatically translate highlighted text.</p>
+
+        <div class="divider"></div>
+
+        <div class="section-title big" id="clickTranslateLabel">Click to translate</div>
+        <label class="switch">
+          <input type="checkbox" id="toggleClickTranslate">
+          <span class="slider"></span>
+        </label>
+        <p class="description" id="clickTranslateDesc">Click on any word to translate it.</p>
+
+        <div class="divider"></div>
+
+        <p id="langLabel">Language</p>
+        <select class="dropdown" id="langSelect">
+          <option value="en">English</option>
+          <option value="ru">Русский</option>
+          <option value="kk">Қазақша</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section">
+        <div class="section-title big" id="themeLabel">Theme</div>
+        <div class="theme-buttons">
+          <button id="darkThemeBtn" class="theme-btn active">🌙 Dark</button>
+          <button id="lightThemeBtn" class="theme-btn">☀️ Light</button>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section">
+        <div class="section-title big"><span id="exportLabel">Export</span></div>
+        <button id="export-anki" class="export-btn">Export to Anki</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/popup.js"></script>
+</body>
+</html>

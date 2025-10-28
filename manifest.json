@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "Just Highlight It",
+  "version": "2.0",
+  "permissions": ["storage", "contextMenus", "scripting", "activeTab", "webRequest", "webRequestBlocking"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "commands": {
+  "open-popup": {
+    "suggested_key": {
+      "default": "Alt+T"
+    },
+    "description": "Открыть настройки JHI"
+  },
+  "open-dictionary": {
+    "suggested_key": {
+      "default": "Alt+Q"
+    },
+    "description": "Открыть словарь"
+  }
+},
+
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["dictionary.css"]
+    }
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*",
+    "https://libretranslate.de/*",
+    "https://libretranslate.com/*",
+    "https://translate.argosopentech.com/*",
+    "https://translate.astian.org/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["dictionary.css", "images/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

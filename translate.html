@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator / Retelling</title>
+    <link rel="stylesheet" href="styles/translate.css">
+</head>
+
+<body>
+    <div class="popup">
+        <div class="popup-header">
+            <div class="circle"></div>
+            <h3 id="modeTitle">Translate</h3>
+            <div class="icons">
+                <button class="settings" id="settingsBtn"><img src="icons/settings.png" height="10"></button>
+                <button class="close" id="closeBtn"><img src="icons/close.png" height="10"></button>
+            </div>
+        </div>
+
+        <div class="popup-body">
+            <div class="original-text">
+                <h4>Original Text:</h4>
+                <div id="originalText" class="text-display"></div>
+            </div>
+
+            <div class="result-area">
+                <h4>Result:</h4>
+                <div id="resultText" class="text-display">
+                    <textarea id="resultTextarea" placeholder="Your result will appear here..."></textarea>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="copyBtn" class="action-btn">Copy</button>
+                <button id="speakBtn" class="action-btn">Speak</button>
+                <button id="saveBtn" class="action-btn">Save to Dictionary</button>
+            </div>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <span>Processing...</span>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/translate.js"></script>
+</body>
+
+</html>
