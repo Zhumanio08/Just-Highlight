@@ -1,13 +1,13 @@
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: "addToDictionary",
-    title: "Добавить в словарь",
+    title: "Add to dictionary",
     contexts: ["selection"]
   });
 
   chrome.contextMenus.create({
     id: "openDictionary",
-    title: "Открыть словарь",
+    title: "Open dictionary",
     contexts: ["page", "selection"]
   });
 
@@ -54,7 +54,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
             chrome.storage.local.set({ dictionary: dict, translationCache: cache }, () => {
               chrome.scripting.executeScript({
                 target: { tabId: tab.id },
-                func: (w, t) => alert(`"${w}" → "${t}" добавлено в словарь ✅`),
+                func: (w, t) => alert(`"${w}" → "${t}"  Added to the dictionary ✅`),
                 args: [prettyWord, prettyTranslation]
               });
             });
