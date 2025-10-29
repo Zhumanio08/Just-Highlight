@@ -1,6 +1,6 @@
 # Just Highlight - Chrome Extension
 
-A simple and convenient Chrome extension that helps you work with text. Select text - get translation, explanation, or add to dictionary.
+Just Highlight is a browser extension designed to help users overcome language barriers and fully immerse themselves in learning a new language. With Just Highlight, you can instantly translate and understand the meaning of any article or book, as well as save new words to your personal dictionary for further study.
 
   ## Features
 
