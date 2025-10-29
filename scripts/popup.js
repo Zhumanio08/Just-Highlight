@@ -167,7 +167,7 @@ async function exportToCSV(words, uiLang) {
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 
-  alert("✅ Файл anki_export.csv сохранён");
+  alert("✅ The file anki_export.csv has been saved.");
 }
 
 // === Экспорт в Anki ===
@@ -203,16 +203,16 @@ async function sendToAnki(words, uiLang) {
 
       const data = await res.json();
       if (data.error) {
-        console.warn("Ошибка добавления в Anki:", data.error);
+        console.warn("Error adding to Anki:", data.error);
       }
     } catch (err) {
-      console.error("❌ Ошибка подключения к Anki:", err);
-      alert("⚠ Не удалось подключиться к Anki. Проверь, что Anki открыт и установлен плагин AnkiConnect.");
+      console.error("❌ Error connecting to Anki:", err);
+      alert("⚠ Unable to connect to Anki. Please verify that Anki is open and the AnkiConnect plugin is installed..");
       return;
     }
   }
 
-  alert("✅ Все слова успешно отправлены в Anki!");
+  alert("✅ All words successfully sent to Anki!");
 }
 
 function showExportModal(words, uiLang) {
@@ -220,13 +220,13 @@ function showExportModal(words, uiLang) {
   modal.className = "export-modal";
   modal.innerHTML = `
     <div class="export-card">
-      <h3>📤 Экспорт словаря</h3>
-      <p>Выберите способ переноса слов:</p>
+      <h3>📤 Exporting a dictionary</h3>
+      <p>Select the method for transferring words:</p>
       <div class="export-buttons">
-        <button id="exportCSV">Сохранить в CSV</button>
-        <button id="exportAnki">Отправить в Anki</button>
+        <button id="exportCSV">Save to CSV</button>
+        <button id="exportAnki">Send to Anki</button>
       </div>
-      <button id="closeExport" class="close-btn">Отмена</button>
+      <button id="closeExport" class="close-btn">Cancel</button>
     </div>
   `;
   document.body.appendChild(modal);
@@ -400,7 +400,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const lang = settings;
 
     if (!words.length) {
-      alert("Словарь пуст 😕");
+      alert("The dictionary is empty. 😕");
       return;
     }
 
